@@ -1,16 +1,22 @@
 import serveStatic from "serve-static-bun";
 import {Question} from "./pages/question.tsx";
 import {pathOf, render} from "./utils.ts";
-import {Layout, Page} from "./components/page.tsx";
+import {Page} from "./components/page.tsx";
+import {Index} from "./pages";
 
 Bun.serve({
     async fetch(req): Promise<Response> {
-        if (pathOf(req).startsWith("/api")) {
+        const path = pathOf(req);
+        console.log(path);
+
+        if (path.startsWith("/api")) {
+            console.log("aaa")
             return processApi(req);
         }
 
-        if (pathOf(req) === "/index.html") {
-            return render(<Question number={1}/>);
+        if (path === "/") {
+            console.log("a")
+            return render(<Index />);
         }
 
         return serveStatic("static")(req);
@@ -45,14 +51,13 @@ function processApi(req: Request) {
 
         default:
             return render(
-                <Layout>
-                    <Page>
-                        <h1>404 - Not found</h1>
-                        <p>
-                            Wie bist du denn hier gelandet?
-                        </p>
-                    </Page>
-                </Layout>
+                <Page>
+                    <h1>404 - Not found</h1>
+                    <p>
+                        Wie bist du denn hier gelandet?
+                        <a href={"/"}>Zurück zur Startseite</a>
+                    </p>
+                </Page>
             );
     }
 }

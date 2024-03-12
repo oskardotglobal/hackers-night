@@ -1,4 +1,5 @@
-import {Footer, Page} from "../components/page.tsx";
+import {Page} from "../components/page.tsx";
+import {Footer} from "../components/footer.tsx";
 
 export function Question({number}: { number: number }) {
     return (
@@ -28,7 +29,7 @@ export function Question({number}: { number: number }) {
                         <input id="idLogin" type="button" value="Login"/>
                     </form>
 
-                    <script src={`/${number}.js`}></script>
+                    <script src={`/js/${number}.js`}></script>
                 </section>
             </main>
 
