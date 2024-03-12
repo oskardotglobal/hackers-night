@@ -5,7 +5,7 @@
         ziffer = ziffer*i;
     function passwordCheck(){
         if (document.getElementById("idBenutzername").value == "George Boole" && document.getElementById("idPasswort").value == ziffer.toString())
-        {alert(_0x2f19[0]);location[_0x2f19[2]](transform(_0x2f19[1]))}
+        {alert(_0x2f19[0]);location[_0x2f19[2]](atob(_0x2f19[1]))}
         else alert("Passwort oder Benutzername falsch!");
     }
     document.getElementById("idLogin").addEventListener("click", passwordCheck);

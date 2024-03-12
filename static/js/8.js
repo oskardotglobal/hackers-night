@@ -408,7 +408,7 @@
     function passwordCheck() {
         if (document.getElementById("idBenutzername").value == x27992u + o19961l + f43816y + w44567l + " " + w39751q + v32104e + l32177u + j37600f + " " + f29930l + t44890a + k11918f + r27891u && document.getElementById("idPasswort").value == fuuu) {
             alert(_0xce8f[0]);
-            location[_0xce8f[2]](transform(_0xce8f[1]))
+            location[_0xce8f[2]](atob(_0xce8f[1]))
         }
         // falls ihr uns jz hasst mats und lukas haben das erstellt und wenn ihr hilfe braucht fragt khoi nach seinem namen :-)
         else alert("Passwort oder Benutzername falsch!");

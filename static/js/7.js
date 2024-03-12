@@ -6,7 +6,7 @@
     function passwordCheck() {
         if (document.getElementById("idBenutzername").value == "Charles Babbage" && document.getElementById("idPasswort").value == wort) {
             alert(_0xce8f[0]);
-            location[_0xce8f[2]](transform(_0xce8f[1]))
+            location[_0xce8f[2]](atob(_0xce8f[1]))
         } else alert("Passwort oder Benutzername falsch!");
     }
 

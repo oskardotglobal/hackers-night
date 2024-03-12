@@ -1,10 +1,12 @@
+// Verwendet in: 3.js
 function decodePF(zeichenkette) {
     if (zeichenkette === "WlemcikrihlShcad")
-        return transform("V2lsaGVsbVNjaGlja2FyZA==");
+        return atob("V2lsaGVsbVNjaGlja2FyZA==");
     if (zeichenkette === "Rcemshnehnacie")
-        return transform("UmVjaGVubWFzY2hpbmU=");
+        return atob("UmVjaGVubWFzY2hpbmU=");
 }
 
+// Verwendet in: 4.js
 function decodeC(zeichenkette, verschiebung) {
     if (verschiebung < 0) {
         return decodeC(zeichenkette, verschiebung + 26);
@@ -27,14 +29,12 @@ function decodeC(zeichenkette, verschiebung) {
     return output;
 }
 
+// Verwendet in: 5.js
 function decodeRED(zeichenkette) {
     return decodeC(zeichenkette, -13);
 }
 
+// Verwendet in: 2.js
 function binCheck(zeichenkette) {
-    if (zeichenkette === "10010111101111110111011100101100001110010001000001011010111010111100111100101") return transform("S29ucmFkIFp1c2U=");
-}
-
-function transform(zeichenkette) {
-    return atob(zeichenkette);
+    if (zeichenkette === "10010111101111110111011100101100001110010001000001011010111010111100111100101") return atob("S29ucmFkIFp1c2U=");
 }

@@ -38,7 +38,7 @@ export function Index() {
                         <input id="idLogin" type="button" value="Login"/>
                     </form>
 
-                    <script src={`/js/index.js`}></script>
+                    <script src={"/js/index.js"}></script>
                 </section>
             </main>
 
