@@ -1,0 +1,144 @@
+/* ---------------------------------------------------------
+   HTML5 Bones
+   This stylesheet contains print styling and a section for 
+   you to simply add your own. This is a basic template 
+   after all.
+   ---------------------------------------------------------*/
+body {
+
+}
+
+/* Default link styling */
+a:link {
+    color: #fff;
+    text-decoration: none;
+}
+
+a:visited {
+    color: darkgray;;
+}
+
+a:hover, a:focus {
+    color: darkgray;
+    text-decoration: underline;
+}
+
+a:active {
+    color: greenyellow;
+}
+
+
+/* ---------------------------------------------------------
+   Author's styles
+   ---------------------------------------------------------*/
+body {
+    font-family: 'Azeret Mono', monospace;
+    color: darkgoldenrod;
+    background-color: darkslategray;
+    line-height: 1.3em;
+}
+
+footer, section p {
+    text-align: center;
+}
+
+header h1 {
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+h2, header p, h3 {
+    text-align: center;
+}
+
+#login {
+    text-align: right;
+}
+
+form {
+    display: block;
+    width: 25em;
+    margin: 0 auto;
+    text-align: right;
+}
+
+input {
+    margin-bottom: 0.5em;
+}
+
+h1, h2, h3 {
+    color: greenyellow;
+}
+
+.wrap {
+    margin: auto;
+    margin-top: 5%;
+    width: 60%;
+    padding: 2%;
+    background-color: rgb(5%, 5%, 5%);
+    box-shadow: 10px 10px 10px rgba(0%, 0%, 0%, 0.4);
+    border-style: solid;
+    border-color: lightgray;
+    border-width: 0.4em;
+}
+
+hr {
+    border: 0;
+    height: 4px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), greenyellow, rgba(0, 0, 0, 0));
+    margin: 2em 0;
+}
+
+
+/* ---------------------------------------------------------
+   Print styles
+   ---------------------------------------------------------*/
+@media print {
+    * {
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        background: transparent !important;
+    }
+
+    html {
+        background-color: #fff;
+    }
+
+    /* Hide navigation */
+    nav {
+        display: none;
+    }
+
+    /* Show link destinations in brackets after the link text */
+    a[href]:after {
+        content: " (" attr(href) ") ";
+    }
+
+    a[href] {
+        font-weight: bold;
+        text-decoration: underline;
+        color: #06c;
+        border: none;
+    }
+
+    /* Don't show link destinations for JavaScript or internal links */
+    a[href^="javascript:"]:after, a[href^="#"]:after {
+        content: "";
+    }
+
+    /* Show abbr title value in brackets after the text */
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    figure {
+        margin-bottom: 1em;
+        overflow: hidden;
+    }
+
+    figure img {
+        border: 1px solid #000;
+    }
+}

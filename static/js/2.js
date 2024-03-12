@@ -1,0 +1,8 @@
+(function () {
+    function passwordCheck(){
+        if (document.getElementById("idBenutzername").value === binCheck("10010111101111110111011100101100001110010001000001011010111010111100111100101") && document.getElementById("idPasswort").value == "Z3")
+        {var _0x38e652=_0x57a1;function _0x2c8f(){var _0x39dd29=['replace','3559806eEKgIP','11XRhwjf','Li4vc2UwM3F3ZXJ0ei9pbmRleC5odG1s','3189QfcFcB','5rTszJk','1DUtAUR','1116894xmdlGF','732950DzBwvI','3904908jKwALm','1760hNNoYR','2219598CrQqct','126490wKLtRt','16aVwgMv'];_0x2c8f=function(){return _0x39dd29;};return _0x2c8f();}function _0x57a1(_0x120618,_0x3d0de9){var _0x2c8f01=_0x2c8f();return _0x57a1=function(_0x57a135,_0x4b0338){_0x57a135=_0x57a135-0x14a;var _0xfef3e7=_0x2c8f01[_0x57a135];return _0xfef3e7;},_0x57a1(_0x120618,_0x3d0de9);}(function(_0x250ee5,_0x55a2b4){var _0x2cbaff=_0x57a1,_0x3af220=_0x250ee5();while(!![]){try{var _0x5854c6=-parseInt(_0x2cbaff(0x14e))/0x1*(parseInt(_0x2cbaff(0x14f))/0x2)+parseInt(_0x2cbaff(0x14c))/0x3*(parseInt(_0x2cbaff(0x152))/0x4)+-parseInt(_0x2cbaff(0x14d))/0x5*(parseInt(_0x2cbaff(0x153))/0x6)+-parseInt(_0x2cbaff(0x154))/0x7*(parseInt(_0x2cbaff(0x155))/0x8)+parseInt(_0x2cbaff(0x157))/0x9+parseInt(_0x2cbaff(0x150))/0xa+-parseInt(_0x2cbaff(0x14a))/0xb*(-parseInt(_0x2cbaff(0x151))/0xc);if(_0x5854c6===_0x55a2b4)break;else _0x3af220['push'](_0x3af220['shift']());}catch(_0x438591){_0x3af220['push'](_0x3af220['shift']());}}}(_0x2c8f,0x489de),alert('Eingabe\x20korrekt.'),location[_0x38e652(0x156)](transform(_0x38e652(0x14b))));}
+        else alert("Passwort oder Benutzername falsch!");
+    }
+    document.getElementById("idLogin").addEventListener("click", passwordCheck);
+})();

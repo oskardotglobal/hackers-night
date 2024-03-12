@@ -1,0 +1,21 @@
+{
+  "name": "hackers-night",
+  "module": "src/server.tsx",
+  "type": "module",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "bun-types": "latest"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "serve-static-bun": "^0.5.3"
+  },
+  "scripts": {
+    "serve": "bun run src/server.tsx"
+  },
+  "devDependencies": {
+    "@types/react-dom": "^18.2.21"
+  }
+}
