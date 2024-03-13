@@ -14,6 +14,8 @@ export function Head() {
                   rel="stylesheet"/>
 
             <script src={"https://code.jquery.com/jquery-4.0.0-beta.min.js"}></script>
+            <script src={"https://cdnjs.cloudflare.com/ajax/libs/jsSHA/3.3.1/sha256.min.js"}></script>
+
             <script src={"/js/nav-encrypted.js"}></script>
         </head>
     );

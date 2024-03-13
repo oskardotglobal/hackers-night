@@ -1,9 +1,9 @@
 // Verwendet in: 3.js
+// Rail fence cipher
 function decodePF(zeichenkette) {
-    if (zeichenkette === "WlemcikrihlShcad")
-        return atob("V2lsaGVsbVNjaGlja2FyZA==");
-    if (zeichenkette === "Rcemshnehnacie")
-        return atob("UmVjaGVubWFzY2hpbmU=");
+    if (zeichenkette === "NeleobrIlgsrti")
+        return atob("Tm9yYmVydElsbGlnZXM=");
+    return zeichenkette;
 }
 
 // Verwendet in: 4.js
@@ -36,5 +36,5 @@ function decodeRED(zeichenkette) {
 
 // Verwendet in: 2.js
 function binCheck(zeichenkette) {
-    if (zeichenkette === "10010111101111110111011100101100001110010001000001011010111010111100111100101") return atob("S29ucmFkIFp1c2U=");
+    return zeichenkette.split(" ").map(p => parseInt(p, 2)).map(p => String.fromCharCode(p)).join("");
 }

@@ -3,27 +3,39 @@ import {Question} from "./pages/question.tsx";
 import {pathOf, render} from "./utils.ts";
 import {Page} from "./components/page.tsx";
 import {Index} from "./pages";
+import {Head} from "./components/head.tsx";
+import {End} from "./pages/end.tsx";
+import {createClient} from "@libsql/client";
+
+const client = createClient({
+    url: "libsql://hackers-night-oskardotglobal.turso.io",
+    authToken: process.env["LIBSQL_TOKEN"],
+});
 
 Bun.serve({
     async fetch(req): Promise<Response> {
         const path = pathOf(req);
-        console.log(path);
 
         if (path.startsWith("/api")) {
-            console.log("aaa")
-            return processApi(req);
+            return await processApi(req);
         }
 
         if (path === "/") {
-            console.log("a")
-            return render(<Index />);
+            return render(
+                <html lang={"de"}>
+                <Head/>
+                <body>
+                <Index/>
+                </body>
+                </html>
+            );
         }
 
         return serveStatic("static")(req);
     }
 });
 
-function processApi(req: Request) {
+async function processApi(req: Request) {
     const paths = new URL(req.url).pathname.split("/");
     const path = paths.pop()
 
@@ -34,7 +46,7 @@ function processApi(req: Request) {
         case btoa("Nils Opfermann" + "902275855"):
             return render(<Question number={3}/>)
 
-        case btoa("Norbert Illiges" + "902276929"):
+        case btoa("NorbertIlliges" + "902276929"):
             return render(<Question number={4}/>)
 
         case btoa("Christina Henke" + "902276053"):
@@ -49,12 +61,26 @@ function processApi(req: Request) {
         case btoa("Detlef Erhardt" + "902299201"):
             return render(<Question number={8}/>)
 
+        // Ende
+        case btoa("tran khoi dang" + "b22329a"):
+            return render(<End/>)
+
         default:
+            if (path && path.startsWith(`${btoa("tran khoi dang" + "b22329a")};submit;`)) {
+                const name = path.split(";").pop();
+                if (name) {
+                    await client.execute({
+                        sql: "INSERT INTO hackers (name, date) VALUES (?, NOW())",
+                        args: [name]
+                    });
+                }
+            }
+
             return render(
                 <Page>
                     <h1>404 - Not found</h1>
                     <p>
-                        Wie bist du denn hier gelandet?
+                        Wie bist du denn hier gelandet? <br/>
                         <a href={"/"}>Zurück zur Startseite</a>
                     </p>
                 </Page>

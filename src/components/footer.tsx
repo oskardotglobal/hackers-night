@@ -14,8 +14,10 @@ export function Footer({number}: { number: number }) {
         <>
             <hr/>
             <footer role="contentinfo">
-                <button id={"hintbtn"}>Hinweis</button>
-                <div style={{display: "none"}} id={"hint"}>{hint}</div>
+                {hint && <>
+                    <button id={"hintbtn"}>Hinweis</button>
+                    <div style={{display: "none"}} id={"hint"}>{hint}</div>
+                </>}
 
                 <br/>
                 <small>

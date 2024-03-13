@@ -1,14 +1,8 @@
 (function () {
-    var a = "Rechenmaschine", b = "Analytical", c = "Engine";
-    var wort = a.substring(c.length, b.length);
     var _0xce8f = ["\x45\x69\x6E\x67\x61\x62\x65\x20\x6B\x6F\x72\x72\x65\x6B\x74\x2E", "\x4C\x69\x34\x76\x63\x32\x55\x77\x4F\x48\x64\x79\x5A\x47\x64\x69\x63\x79\x39\x70\x62\x6D\x52\x6C\x65\x43\x35\x6F\x64\x47\x31\x73", "\x72\x65\x70\x6C\x61\x63\x65"];
 
-    function passwordCheck() {
-        if (document.getElementById("idBenutzername").value == "Charles Babbage" && document.getElementById("idPasswort").value == wort) {
-            alert(_0xce8f[0]);
-            location[_0xce8f[2]](atob(_0xce8f[1]))
-        } else alert("Passwort oder Benutzername falsch!");
-    }
+    // tipp: sha hashes zu brechen braucht ihr gar nicht zu versuchen
+    // vielleicht kann man das passwort anders finden? ;)
 
-    document.getElementById("idLogin").addEventListener("click", passwordCheck);
+    const _0x3c7f06=_0x325b;(function(_0x32a5d9,_0x493e6b){const _0x18e371=_0x325b,_0x3f56e8=_0x32a5d9();while(!![]){try{const _0x8a72a4=parseInt(_0x18e371(0x1c6))/0x1*(parseInt(_0x18e371(0x1bd))/0x2)+parseInt(_0x18e371(0x1d1))/0x3+-parseInt(_0x18e371(0x1cd))/0x4+parseInt(_0x18e371(0x1ca))/0x5*(-parseInt(_0x18e371(0x1c4))/0x6)+-parseInt(_0x18e371(0x1c5))/0x7+-parseInt(_0x18e371(0x1cf))/0x8+parseInt(_0x18e371(0x1be))/0x9;if(_0x8a72a4===_0x493e6b)break;else _0x3f56e8['push'](_0x3f56e8['shift']());}catch(_0x33713b){_0x3f56e8['push'](_0x3f56e8['shift']());}}}(_0x4d37,0x9823d));const sha256=_0x3bb2c0=>new jsSHA(_0x3c7f06(0x1d0),_0x3c7f06(0x1c0),{'encoding':_0x3c7f06(0x1c3)})[_0x3c7f06(0x1ce)](_0x3bb2c0)[_0x3c7f06(0x1c1)]('HEX');function passwordCheck(){const _0x378c65=_0x3c7f06;if(document[_0x378c65(0x1cc)](_0x378c65(0x1c9))['value']===_0x378c65(0x1c8)&&sha256(document[_0x378c65(0x1cc)]('idPasswort')[_0x378c65(0x1bf)])===_0x378c65(0x1bc))alert(_0xce8f[0x0]),n(_0x378c65(0x1c8),document[_0x378c65(0x1cc)]('idPasswort')[_0x378c65(0x1bf)]);else alert(_0x378c65(0x1c2));}document['getElementById'](_0x3c7f06(0x1c7))[_0x3c7f06(0x1cb)]('click',passwordCheck);function _0x325b(_0x5a15ab,_0x4812cc){const _0x4d37dd=_0x4d37();return _0x325b=function(_0x325b45,_0x4ded51){_0x325b45=_0x325b45-0x1bc;let _0x2e6dbc=_0x4d37dd[_0x325b45];return _0x2e6dbc;},_0x325b(_0x5a15ab,_0x4812cc);}function _0x4d37(){const _0x240868=['1051248pJXOku','update','797440gZCgdh','SHA-256','865452VVnkCy','13131fbfbda89a3f0ad5000bfa4d94b1bf0dd7a915cd6d69f8f65d38e13d2e2f','96330itycEa','11136618kRPexQ','value','TEXT','getHash','Passwort\x20oder\x20Benutzername\x20falsch!','UTF8','55002HdEsTQ','2611322HcMPJh','3ZyJFKN','idLogin','Detlef\x20Erhardt','idBenutzername','170cJrEmd','addEventListener','getElementById'];_0x4d37=function(){return _0x240868;};return _0x4d37();}
 })();

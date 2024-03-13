@@ -174,3 +174,7 @@ dist
 # Finder (MacOS) folder config
 .DS_Store
 
+# Turso dev db
+dev.db
+dev.db-shm
+dev.db-wal
