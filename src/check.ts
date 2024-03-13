@@ -6,5 +6,5 @@ const client = createClient({
 });
 
 const rs = await client.execute("SELECT * FROM hackers;");
-console.log(rs.rows);
+console.log(rs.rows.map(r => {return {name: r.name, date: r.date}}));
 client.close();
