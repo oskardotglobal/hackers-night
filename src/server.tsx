@@ -70,7 +70,7 @@ async function processApi(req: Request) {
                 const name = path.split(";").pop();
                 if (name) {
                     await client.execute({
-                        sql: "INSERT INTO hackers (name, date) VALUES (?, NOW())",
+                        sql: "INSERT INTO hackers (name, date) VALUES (?, datetime('now'))",
                         args: [name]
                     });
                 }
