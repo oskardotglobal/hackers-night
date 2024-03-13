@@ -8,7 +8,8 @@ export function End() {
             $.ajax({url: "/api/" + localStorage.getItem("last") + ";submit;" + vorname});
             alert("Du hast es geschafft und wurdest registriert.");
             
-            $("#idForm").hide();
+            $("#idForm").remove();
+            $("#script).remove();
         });
     `;
 
@@ -32,7 +33,7 @@ export function End() {
                         <input id="idCode" type="button" value="Code generieren"/>
                     </form>
                 </section>
-                <script dangerouslySetInnerHTML={{__html: script}}></script>
+                <script id="script" dangerouslySetInnerHTML={{__html: script}}></script>
             </main>
 
             <Footer number={NaN}/>
