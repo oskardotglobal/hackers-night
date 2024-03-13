@@ -10,13 +10,20 @@ export function Footer({number}: { number: number }) {
     // @ts-ignore
     const hint = hints[number];
 
+    const script = `
+        document.getElementById("hintbtn").addEventListener("click", function() {
+            $("#hint").show();
+            $("#hintbtn").hide();
+        });
+    `;
+
     return (
         <>
             <hr/>
             <footer role="contentinfo">
                 {hint && <>
                     <button id={"hintbtn"}>Hinweis</button>
-                    <div style={{display: "none"}} id={"hint"}>{hint}</div>
+                    <div style={{display: "none", color: "white"}} id={"hint"}>Hinweis: {hint}</div>
                 </>}
 
                 <br/>
@@ -24,6 +31,8 @@ export function Footer({number}: { number: number }) {
                     Hacker's Night am Otto-Nagel-Gymnasium {new Date().getFullYear()}
                 </small>
             </footer>
+
+            <script dangerouslySetInnerHTML={{__html: script}}></script>
         </>
     );
 }
