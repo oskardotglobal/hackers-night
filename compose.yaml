@@ -1,0 +1,21 @@
+version: "3"
+
+networks:
+  traefik:
+    external: true
+
+services:
+  app:
+    container_name: hackers-night
+    build: .
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.hackers-night.rule=Host(`hacken.oskar.global`)"
+      - "traefik.http.routers.hackers-night.entrypoints=websecure"
+      - "traefik.http.routers.hackers-night.tls.certresolver=cloudflare"
+      - "traefik.http.routers.hackers-night.service=hackers-night"
+      - "traefik.http.services.hackers-night.loadbalancer.server.port=3000"
+    env_file:
+      - .env
