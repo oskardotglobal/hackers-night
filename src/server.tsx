@@ -1,5 +1,5 @@
 import serveStatic from "serve-static-bun";
-import {pathOf, render} from "./utils.ts";
+import {pathOf} from "./utils.ts";
 import {createClient} from "@libsql/client";
 import index from "./routes";
 import question2 from "./routes/api/question2.tsx";
