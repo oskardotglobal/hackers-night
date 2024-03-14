@@ -2,15 +2,22 @@ import {Page} from "../components/page.tsx";
 import {Footer} from "../components/footer.tsx";
 
 export function End() {
+
     const script = `
         document.getElementById("idCode").addEventListener("click", function() {
             const vorname = document.getElementById("idVorname").value;
-            $.ajax({url: "/api/" + localStorage.getItem("last") + ";submit;" + vorname});
-            alert("Du hast es geschafft und wurdest registriert.");
             
+            $.ajax({
+                url: "/api/submit/" + localStorage.getItem("last"),
+                method: "POST",
+                data: JSON.stringify({name: vorname}),
+            });
+        
+            alert("Du hast es geschafft und wurdest registriert.");
+
             $("#idForm").remove();
-            $("#script).remove();
-        });
+            $("#script").remove();
+    });
     `;
 
     return (
