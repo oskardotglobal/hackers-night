@@ -11,6 +11,8 @@ import question7 from "./routes/api/question7.tsx";
 import question8 from "./routes/api/question8.tsx";
 import end from "./routes/api/end.tsx";
 import submit from "./routes/api/submit.tsx";
+import login from "./routes/api/login.tsx";
+import question9 from "./routes/api/question9.tsx";
 
 const client = createClient({
     url: "libsql://hackers-night-oskardotglobal.turso.io",
@@ -47,7 +49,10 @@ Bun.serve({
                 return await question8(req);
 
             case "/api/" + btoa("tran khoi dang" + "b22329a"):
-                return await end(req);
+                return await question9(req);
+
+            case "/api/login":
+                return await login(req);
 
             case "/api/submit/" + btoa("tran khoi dang" + "b22329a"):
                 return await submit(req, client);

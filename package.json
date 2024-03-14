@@ -9,7 +9,9 @@
   },
   "dependencies": {
     "@libsql/client": "^0.5.6",
+    "@types/crypto-js": "^4.2.2",
     "@types/jquery": "^3.5.29",
+    "crypto-js": "^4.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "serve-static-bun": "^0.5.3"
