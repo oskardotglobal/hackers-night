@@ -1,4 +1,3 @@
-import {Response} from "bun-types/fetch";
 import {render} from "../../utils.ts";
 import {End} from "../../pages/end.tsx";
 import {SHA256} from "crypto-js";
