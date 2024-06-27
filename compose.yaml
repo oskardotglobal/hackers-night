@@ -12,7 +12,7 @@ services:
       - traefik
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.hackers-night.rule=Host(`hacken.oskar.global`)"
+      - "traefik.http.routers.hackers-night.rule=Host(`hackernacht.oskar.global`)"
       - "traefik.http.routers.hackers-night.entrypoints=websecure"
       - "traefik.http.routers.hackers-night.tls.certresolver=cloudflare"
       - "traefik.http.routers.hackers-night.service=hackers-night"
